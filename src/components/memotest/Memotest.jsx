@@ -10,8 +10,8 @@ import {
     ChakraProvider,
     extendTheme,
 } from '@chakra-ui/react';
-// import JSConfetti from 'js-confetti';
-// import Swal from 'sweetalert2';
+import JSConfetti from 'js-confetti';
+import Swal from 'sweetalert2';
 import './Memotest.css';
 
 const IMAGES = [
@@ -44,7 +44,8 @@ const theme = extendTheme({
 export default function Memotest() {
     const [guessed, setGuessed] = useState([]);
     const [selected, setSelected] = useState([]);
-    // const jsConfetti = new JSConfetti();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const jsConfetti = new JSConfetti();
 
     useEffect(() => {
         if (selected.length === 2) {
@@ -55,22 +56,22 @@ export default function Memotest() {
         }
     }, [selected]);
 
-    // useEffect(() => {
-    //     if (guessed.length === IMAGES.length) {
-    //         jsConfetti.addConfetti();
-    //         Swal.fire({
-    //             title: '¡Has Ganado!!!',
-    //             showClass: {
-    //                 popup: 'animate__animated animate__fadeInDown',
-    //             },
-    //             hideClass: {
-    //                 popup: 'animate__animated animate__fadeOutUp',
-    //             },
-    //         });
+    useEffect(() => {
+        if (guessed.length === IMAGES.length) {
+            jsConfetti.addConfetti();
+            Swal.fire({
+                title: '¡Has Ganado!!!',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown',
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp',
+                },
+            });
 
-    //         setTimeout(() => location.reload(), 1500);
-    //     }
-    // }, [jsConfetti]);
+            setTimeout(() => location.reload(), 1500);
+        }
+    }, [guessed, jsConfetti]);
 
     const [isDesktop] = useMediaQuery('(min-width: 480px)');
 
