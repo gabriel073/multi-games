@@ -55,22 +55,22 @@ export default function Memotest() {
         }
     }, [selected]);
 
-    useEffect(() => {
-        if (guessed.length === IMAGES.length) {
-            jsConfetti.addConfetti();
-            Swal.fire({
-                title: '¡Has Ganado!!!',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown',
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp',
-                },
-            });
+    // useEffect(() => {
+    //     if (guessed.length === IMAGES.length) {
+    //         jsConfetti.addConfetti();
+    //         Swal.fire({
+    //             title: '¡Has Ganado!!!',
+    //             showClass: {
+    //                 popup: 'animate__animated animate__fadeInDown',
+    //             },
+    //             hideClass: {
+    //                 popup: 'animate__animated animate__fadeOutUp',
+    //             },
+    //         });
 
-            // setTimeout(() => location.reload(), 1500);
-        }
-    }, [guessed]);
+    //         setTimeout(() => location.reload(), 1500);
+    //     }
+    // }, [jsConfetti]);
 
     const [isDesktop] = useMediaQuery('(min-width: 480px)');
 
