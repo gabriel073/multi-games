@@ -1,0 +1,53 @@
+.title-memo {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+  }
+  body {
+    overflow-y: hidden;
+  }
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  .image-item {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-item.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped-icon {
+    transform: rotateY(180deg);
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .back-button {
+      width: 3rem !important;
+      height: 2rem !important;
+    }
+    main {
+      position: fixed;
+    }
+    .container {
+      margin-top: 50px !important;
+    }
+  }
+  
