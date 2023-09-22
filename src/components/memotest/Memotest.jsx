@@ -10,8 +10,8 @@ import {
     ChakraProvider,
     extendTheme,
 } from '@chakra-ui/react';
-import JSConfetti from 'js-confetti';
-import Swal from 'sweetalert2';
+// import JSConfetti from 'js-confetti';
+// import Swal from 'sweetalert2';
 import './Memotest.css';
 
 const IMAGES = [
@@ -44,7 +44,7 @@ const theme = extendTheme({
 export default function Memotest() {
     const [guessed, setGuessed] = useState([]);
     const [selected, setSelected] = useState([]);
-    const jsConfetti = new JSConfetti();
+    // const jsConfetti = new JSConfetti();
 
     useEffect(() => {
         if (selected.length === 2) {
