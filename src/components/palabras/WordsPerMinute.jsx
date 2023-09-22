@@ -87,7 +87,7 @@ export default function WordsPerMinute() {
                     position="absolute"
                     top="1rem"
                     left="1rem"
-                    onClick={() => (location.href = 'http://localhost:3000/')}
+                    onClick={() => (location.href = 'https://multi-games.vercel.app/')}
                 >Atras</Button >
                 {/* https://gabriel073.github.io/multiProjects */}
             </Stack>

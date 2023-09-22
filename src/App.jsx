@@ -1,5 +1,5 @@
 import { Flex, Text, Stack, ChakraProvider, Box, Link } from "@chakra-ui/react";
-// import { Link } from "react-router-dom";
+
 import './App.css';
 
 

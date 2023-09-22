@@ -156,9 +156,8 @@ export default function Pokemon() {
                         position="absolute"
                         top="1rem"
                         left="1rem"
-                        onClick={() => (location.href = 'http://localhost:3000/')}
+                        onClick={() => (location.href = 'https://multi-games.vercel.app/')}
                     >
-                        {/* https://gabriel073.github.io/multiProjects */}
                         Atras
                     </Button>
                     <div className="pokemon-container">
@@ -178,9 +177,9 @@ export default function Pokemon() {
                         {hasWon ? (
                             <Button
                                 className='play-again-button' background='#1B4DF5'>
-                                <a id="pokemon" href="http://localhost:5173/multiProjects/" >Vuelve al Menu</a>
+                                <a id="pokemon" href="https://multi-games.vercel.app/pokemon" >Vuelve al Menu</a>
                             </Button>
-                            // https://gabriel073.github.io/multiProjects/pokemon/
+
                         ) : (
                             <form onSubmit={handleSubmit}>
                                 <Stack direction="row" className="pokemon-form">

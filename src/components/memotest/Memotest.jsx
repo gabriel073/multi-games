@@ -99,8 +99,7 @@ export default function Memotest() {
                     border="solid 1px #d3e8f7"
                     top={isDesktop ? '20px' : '2.5rem'}
                     left={isDesktop ? '1rem' : '0.5rem'}
-                    onClick={() => (location.href = 'http://localhost:3000/')}
-                // https://gabriel073.github.io/multiProjects
+                    onClick={() => (location.href = 'https://multi-games.vercel.app/')}
                 >
                     Atrás
                 </Button>
