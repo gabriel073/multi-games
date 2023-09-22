@@ -67,8 +67,8 @@ export default function Memotest() {
                     popup: 'animate__animated animate__fadeOutUp',
                 },
             });
-            // eslint-disable-next-line no-restricted-globals
-            setTimeout(() => location.reload(), 1500);
+
+            // setTimeout(() => location.reload(), 1500);
         }
     }, [guessed]);
 
