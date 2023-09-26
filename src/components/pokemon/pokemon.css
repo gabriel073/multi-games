@@ -26,6 +26,8 @@ main {
 }
 .title-poke {
   font-size: 3rem;
+  margin-top: 70px;
+  margin-bottom: -75px;
   user-select: none;
   text-transform: uppercase;
   background-image: linear-gradient(
@@ -46,8 +48,6 @@ main {
   -webkit-text-fill-color: transparent;
   animation: textclip 4s linear infinite;
   text-align: center;
-  position: relative;
-  top: 50px;
 }
 
 @keyframes textclip {
@@ -112,7 +112,7 @@ main {
 }
 
 /* ************************ MEDIA QUERIES  **************************** */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   body {
     width: 450px !important;
     background-repeat: no-repeat !important;
@@ -127,13 +127,13 @@ main {
   }
   .button-atras {
     margin-top: 20px;
+    width: 10%;
   }
 
   .title-poke {
-    position: relative;
-    top: 180px;
-    right: 20px;
     font-size: 1.5rem;
+    margin-bottom: -100px;
+    margin-top: 120px;
   }
 
   .image-container {

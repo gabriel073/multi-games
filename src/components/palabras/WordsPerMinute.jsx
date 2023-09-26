@@ -87,13 +87,13 @@ export default function WordsPerMinute() {
                     position="absolute"
                     top="1rem"
                     left="1rem"
-                    onClick={() => (location.href = 'https://multi-games.vercel.app/')}
+                    onClick={() => (location.href = 'https://multi-games.vercel.app/' || "http://localhost:3000/")}
                 >Atras</Button >
-                {/* https://gabriel073.github.io/multiProjects */}
+
             </Stack>
             <Center minHeight="100vh" py={8}>
                 <Stack spacing={8} align="center">
-                    <Text fontSize={{ base: '2rem', sm: '3.5rem' }} fontWeight="bold" color="white">
+                    <Text fontSize={{ base: '2rem', md: '3.5rem' }} fontWeight="bold" color="white">
                         Palabras por Minuto ⏳
                     </Text>
                     {Boolean(time) && (
