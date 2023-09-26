@@ -36,6 +36,7 @@ const theme = extendTheme({
                 WebkitFontSmoothing: 'antialiased',
                 MozOsxFontSmoothing: 'grayscale',
                 WebkitTextSizeAdjust: '100%',
+
             },
         },
     },
@@ -73,14 +74,16 @@ export default function Memotest() {
         }
     }, [guessed]);
 
-    const [isDesktop] = useMediaQuery('(min-width: 480px)');
+    const [isDesktop] = useMediaQuery('(min-width: 768px)');
 
     return (
         <ChakraProvider theme={theme}>
-            <Box textAlign="center"
+            <Box
+                // mt={isDesktop ? '0px' : '85px'}
+                textAlign="center"
                 minHeight="104vh"
                 minWidth="100vw"
-                className={'container'}
+                className="container"
                 bgGradient="linear-gradient(
                 180deg,
                 rgba(2, 0, 36, 1) 0%,
@@ -91,24 +94,25 @@ export default function Memotest() {
               text-rendering: optimizeLegibility;
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
-              -webkit-text-size-adjust: 100%;">
+              -webkit-text-size-adjust: 10s0%;">
                 <Button
                     className="back-button"
                     colorScheme="blue"
                     position="absolute"
                     border="solid 1px #d3e8f7"
-                    top={isDesktop ? '20px' : '2.5rem'}
-                    left={isDesktop ? '1rem' : '0.5rem'}
+                    mt={isDesktop ? '60px' : '65px'}
+                    left={isDesktop ? '1rem' : '2rem'}
+                    w={isDesktop ? '5rem' : '2rem'}
                     onClick={() => location.href = 'https://multi-games.vercel.app/'}
                 >
                     Atrás
                 </Button>
-                <Box className={'container-gral'}  >
+                <Box className={'container-gral'}   >
                     <Center>
                         <Text
-                            fontSize={isDesktop ? '3.5rem' : '2.2rem'}
-                            mt={isDesktop ? '1px' : '80px'}
-                            mb={isDesktop ? '1px' : '100px'}
+                            fontSize={isDesktop ? '3rem' : '2.2rem'}
+                            mt={isDesktop ? '50px' : '125px'}
+                            mb={isDesktop ? '10px' : '40px'}
                             fontWeight="bold"
                             className="title-memo"
                         >
@@ -116,13 +120,14 @@ export default function Memotest() {
                         </Text>
                     </Center>
                     <Center mt={2}>
-                        <SimpleGrid columns={isDesktop ? 5 : 4} spacing={4} width={isDesktop ? "40%" : "75%"}>
+                        <SimpleGrid columns={isDesktop ? 5 : 4} spacing={4} width={isDesktop ? "40%" : "65%"}>
                             {IMAGES.map((image) => {
                                 const [, url] = image.split('|');
 
                                 return (
                                     <Box
                                         key={image}
+                                        mb={isDesktop ? '0px' : '15px'}
                                         className={`image-item ${selected.includes(image) || guessed.includes(image) ? 'flipped' : ''
                                             }`}
                                         p={4}
