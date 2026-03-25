@@ -7,7 +7,7 @@ function App() {
   return (
     <ChakraProvider>
       <Flex
-        // 
+      
         overflowY={{ base: "scroll", md: "scroll" }}
         h="100%"
         scrollBehavior="smooth"
