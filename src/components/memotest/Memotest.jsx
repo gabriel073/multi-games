@@ -72,7 +72,7 @@ export default function Memotest() {
 
             setTimeout(() => location.reload(), 1500);
         }
-    }, [guessed]);
+    }, [jsConfetti]);
 
     const [isDesktop] = useMediaQuery('(min-width: 768px)');
 
