@@ -1,6 +1,6 @@
-import { Flex, Text, Stack, ChakraProvider, Box, Link } from "@chakra-ui/react";
-
+import { Flex, Text, Stack, ChakraProvider, Box, Image } from "@chakra-ui/react";
 import './App.css';
+import { Link } from "react-router-dom";
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
           <Flex
 
             className="container"
-            direction={{ base: "column ", md: "row" }}
+            direction={{ base: "column", md: "row" }}
             // h="auto"
             spacing={12}
             gap={14}
@@ -49,7 +49,7 @@ function App() {
             w="100%"
           >
 
-            <Link href="/memotest" fontSize="xl" className="game-link" mb={{ base: 6, md: 6 }} align="center" color={"whiteAlpha.500"} w={"10rem"}>
+            <Link to="/memotest"   fontSize="xl" className="game-link" mb={{ base: 6, md: 6 }} align="center" color={"whiteAlpha.500"} w={"10rem"}>
               Memorizando
 
               <Box
@@ -65,7 +65,7 @@ function App() {
               />
             </Link>
 
-            <Link href="/wpm" fontSize="xl" className="game-link" mb={{ base: 6, md: 6 }} color={"whiteAlpha.500"}  >
+            <Link to="/wpm" fontSize="xl" className="game-link" mb={{ base: 6, md: 6 }} color={"whiteAlpha.500"}  >
 
               Palabras por minuto
 
@@ -83,20 +83,21 @@ function App() {
               />
             </Link>
 
-            <Link href="/pokemon" fontSize="xl" mb={{ base: 6, md: 6 }} align="center" className="game-link" color="whiteAlpha.500">
+            <Link to="/pokemon" fontSize="xl" mb={{ base: 6, md: 6 }} align="center" className="game-link" color="whiteAlpha.500">
 
               Adivina Pokemon
-
-              <Box
-                mt={{ base: 0, md: 4 }}
-                w={150}
-                h={150}
-                borderRadius="xl"
-                boxShadow="xl"
-                backgroundImage="url(https://pics.cdnvia.com/pics/juegos/420/pic1-273-adivina-el-pokemon.jpg)"
-                backgroundSize="cover"
-                backgroundPosition="center"
-              />
+ 
+         <Image
+           src="/pokemon.jpg"
+          
+            alt="pokemon"
+            mt={{ base: 0, md: 4 }}            
+            boxSize="150px"
+            borderRadius="xl"
+            boxShadow="xl"
+            objectFit="cover"
+          />
+     
             </Link>
           </Flex>
         </Stack>

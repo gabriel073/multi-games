@@ -4,6 +4,7 @@ import JSConfetti from 'js-confetti';
 import Swal from 'sweetalert2';
 import { Input, Stack, ChakraProvider, extendTheme, Button } from '@chakra-ui/react';
 import './pokemon.css';
+import yuyos from '../../assets/yuyos.png';
 
 const POKEMONS = [
     "bulbasaur",
@@ -165,7 +166,7 @@ export default function Pokemon() {
                             <h2 className="title-poke">¿Adivina Quién se esconde <br /> Detrás?</h2>
                         </div>
                         <div className="image-container">
-                            <img className="image-yuyo" src="images/yuyos.png" alt="yuyos" />
+                            <img className="image-yuyo" src={yuyos} alt="yuyos" />
                         </div>
                         <div className={`pokemon-image ${hasWon ? '' : 'invert'}`}>
                             <img
